@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/davidlcervantes/Desktop/DatingApp/DatingApp.API/DatingApp.API.csproj": {}
+    "/Users/davidlcervantes/Projects/DatingApp/DatingApp.API/DatingApp.API.csproj": {}
   },
   "projects": {
-    "/Users/davidlcervantes/Desktop/DatingApp/DatingApp.API/DatingApp.API.csproj": {
+    "/Users/davidlcervantes/Projects/DatingApp/DatingApp.API/DatingApp.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/davidlcervantes/Desktop/DatingApp/DatingApp.API/DatingApp.API.csproj",
+        "projectUniqueName": "/Users/davidlcervantes/Projects/DatingApp/DatingApp.API/DatingApp.API.csproj",
         "projectName": "DatingApp.API",
-        "projectPath": "/Users/davidlcervantes/Desktop/DatingApp/DatingApp.API/DatingApp.API.csproj",
+        "projectPath": "/Users/davidlcervantes/Projects/DatingApp/DatingApp.API/DatingApp.API.csproj",
         "packagesPath": "/Users/davidlcervantes/.nuget/packages/",
-        "outputPath": "/Users/davidlcervantes/Desktop/DatingApp/DatingApp.API/obj/",
+        "outputPath": "/Users/davidlcervantes/Projects/DatingApp/DatingApp.API/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -20,13 +20,13 @@
           "/Users/davidlcervantes/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.2"
+          "netcoreapp3.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.2": {
+          "netcoreapp3.0": {
             "projectReferences": {}
           }
         },
@@ -37,35 +37,48 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.2": {
+        "netcoreapp3.0": {
           "dependencies": {
-            "Microsoft.AspNetCore.App": {
-              "suppressParent": "All",
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
+              "version": "[3.0.0, )"
             },
-            "Microsoft.AspNetCore.Razor.Design": {
-              "suppressParent": "All",
+            "Microsoft.EntityFrameworkCore.Design": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[3.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[3.0.0, )"
             },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
+            "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
+              "version": "[5.6.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[5.6.0, )"
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

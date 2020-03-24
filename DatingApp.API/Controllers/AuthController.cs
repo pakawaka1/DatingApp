@@ -15,7 +15,7 @@ namespace DatingApp.API.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IAuthRepository _repo;
-        private readonly IConfiguration _config;
+        // private readonly IConfiguration _config;
 
 
         public AuthController(IAuthRepository repo, IConfiguration config)
@@ -39,21 +39,21 @@ namespace DatingApp.API.Controllers
             return StatusCode(201);
         }
 
-        [HttpPost("login")]
-        public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
-        {
-            var userFromRepo = await _repo.Login(userForLoginDto.Username, userForLoginDto.Password);
+        // [HttpPost("login")]
+        // public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
+        // {
+        //     var userFromRepo = await _repo.Login(userForLoginDto.Username, userForLoginDto.Password);
 
-            if (userFromRepo == null)
-                return Unauthorized();
+        //     if (userFromRepo == null)
+        //         return Unauthorized();
 
-            var claims = new[]
-            {
-                new Claim(ClaimTypes.NameIdentifier, userFromRepo.Id.ToString()),
-                new Claim(ClaimTypes.Name, userFromRepo.Username)
+        //     var claims = new[]
+        //     {
+        //         new Claim(ClaimTypes.NameIdentifier, userFromRepo.Id.ToString()),
+        //         new Claim(ClaimTypes.Name, userFromRepo.Username)
 
-            };
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings:Token").Value));
-        }
+        //     };
+        //     var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings:Token").Value));
+        // }
     }
 }
